@@ -29,7 +29,20 @@
   <hr>
   <br class='clear'>
 
-<%= yield %>
+<div class="container">
+  <%= yield %>
+</div>
+
+<div class="footer">
+  <div class="container">
+    <div class="col-xs-6">
+      <%= link_to "This isn't enough, I need more", "#", :class => 'next-quote' %>
+    </div>
+    <div class="col-xs-6 footer-blurb">
+      Proudly hacked in Toronto, Ontario by <a href="http://andrewdesmith.github.io">Andrew</a><br>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
