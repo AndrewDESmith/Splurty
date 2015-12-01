@@ -2,7 +2,8 @@ require 'test_helper'
 
 class QuotesControllerTest < ActionController::TestCase
   test "quote show page" do
-    quote = Quote.create(:author => 'Ken Mazaika', :saying => 'You only yolo once.')
+    # Loads the templated quote instance data stored under the FactoryGirl class in test/factories.rb
+    quote = FactoryGirl.create(:quote)
     # Trigger the show page
     get :show, :id => quote.id
     # Verify that the appropriate http status code is given to the browser
